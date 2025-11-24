@@ -60,7 +60,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2025-11-24 23:11:38',
+  postUpdate: '2025-11-24 23:16:50',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -191,30 +191,37 @@
       detectApple()
     })(window)</script><script>(function(d, w, c) {
   w.ChatraID = 'mrAknKedQPkNdg2aP';
-
-  // 定义 Chatra 函数队列
   w[c] = w[c] || function() {
     (w[c].q = w[c].q || []).push(arguments);
   };
-
-  // 动态加载 Chatra 脚本
   var s = d.createElement('script');
   s.async = true;
   s.src = 'https://call.chatra.io/chatra.js';
-  s.onload = function() {
-    // 确保 Chatra 加载完成后绑定按钮事件
-    document.addEventListener('DOMContentLoaded', function() {
-      var chatBtn = document.querySelector('.chat-btn');
-      if(chatBtn) {
-        chatBtn.addEventListener('click', function() {
-          // 打开 Chatra 聊天窗口
+  d.head.appendChild(s);
+})(document, window, 'Chatra');
+</script><script>// 初始化 Chat 按钮事件函数
+function initChatBtn() {
+  var chatBtn = document.querySelector('.chat-btn');
+  if (chatBtn) {
+    // 避免重复绑定
+    if (!chatBtn._chatBound) {
+      chatBtn.addEventListener('click', function() {
+        if (window.Chatra) {
           Chatra('openChat', true);
-        });
-      }
-    });
-  };
-  if (d.head) d.head.appendChild(s);
-})(document, window, 'Chatra');</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://telegraph-image-92x.pages.devundefined"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+        } else {
+          console.warn('Chatra 未加载完成');
+        }
+      });
+      chatBtn._chatBound = true;
+    }
+  }
+}
+
+// 页面加载完成绑定
+document.addEventListener('DOMContentLoaded', initChatBtn);
+
+// Hexo / SPA PJAX 页面切换时重新绑定
+document.addEventListener('pjax:end', initChatBtn);</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://telegraph-image-92x.pages.devundefined"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
   endLoading: () => {
     document.getElementById('loading-box').classList.add("loaded");
   },
