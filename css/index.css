@@ -2850,15 +2850,8 @@ input::placeholder {
   z-index: -999;
   width: 200%;
   height: 200%;
-  top: -50%;
-  left: -50%;
-  -webkit-transform: rotate(-1deg);
-  -moz-transform: rotate(-1deg);
-  -o-transform: rotate(-1deg);
-  -ms-transform: rotate(-1deg);
-  transform: rotate(-1deg);
   -webkit-overflow-scrolling: touch;
-  background: var(--anzhiyu-background);
+  background: var(url("https://gitee.com/MC-LUO/software-repository/blob/master/logo.png"));
   background-attachment: local;
   background-position: center;
   background-size: cover;
