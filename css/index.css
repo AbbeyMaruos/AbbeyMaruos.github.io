@@ -2851,7 +2851,7 @@ input::placeholder {
   width: 200%;
   height: 200%;
   -webkit-overflow-scrolling: touch;
-  background: var(url("https://gitee.com/MC-LUO/software-repository/blob/master/logo.png"));
+  background: url("https://gitee.com/MC-LUO/software-repository/blob/master/logo.png");
   background-attachment: local;
   background-position: center;
   background-size: cover;
