@@ -60,7 +60,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2026-01-11 00:50:26',
+  postUpdate: '2026-01-11 14:07:38',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -430,7 +430,7 @@ queueMicrotask(() => {
 
   const getComment = async () => {
     try {
-      const res = await fetch('https://chat-one-tau-12.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
+      const res = await fetch('https://www.marcopersonalwebsite.asia/api/comment?type=recent&count=6', { method: 'GET' })
       const result = await res.json()
       const walineArray = result.data.map(e => {
         return {
